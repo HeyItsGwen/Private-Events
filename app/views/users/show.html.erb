@@ -1,0 +1,14 @@
+<p class='has-text-info-light has-text-centered column'><%= @user.email %>'s events</p><br/>
+<section class='column'>
+  <% @events.each do |event| %>
+    <section class='user-event'>
+      <% if event.user.email == @user.email %>
+        <span class='has-text-weight-bold'><%= event.title %> :</span><br/>
+        <%= event.description %>
+        <%= event.date %><br/>
+        <%= link_to 'Show Event', event %>
+      <% end %>
+    </section>
+  <% end %>
+</section>
+
