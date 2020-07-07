@@ -4,8 +4,7 @@ class UsersController < ApplicationController
 
   def show
     @user = User.find(params[:id])
-    @events = Event.all
+    @created_events = @user.created_events.all
   end
 
-  private 
 end
