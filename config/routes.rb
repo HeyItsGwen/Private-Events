@@ -6,5 +6,7 @@ Rails.application.routes.draw do
   root to: 'events#index'
 
   get '/users/:id' => 'users#show'
+  get '/events/:id/attend' => 'attendees#create'
+  get '/events/:id/leave' => 'attendees#destroy'
 
 end

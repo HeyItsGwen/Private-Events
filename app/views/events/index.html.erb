@@ -18,7 +18,7 @@
         <td><%= event.title %></td>
         <td><%= event.description %></td>
         <td><%= event.date %></td>
-        <td><%= link_to event.user.email, "users/#{event.user.id}" %></td>
+        <td><td><%= link_to User.find(event.owner_id).email, "users/#{event.owner_id}" %></td>
       </tr>
       <tr><td> </td></tr>
       <tr class='show-edit-destroy'>
